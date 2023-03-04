@@ -16,7 +16,8 @@ function datos(Usuario) {
     const usuario = Usuario
     alert("Tu dni es " + usuario.dni+" y tu edad es "+usuario.edad +" años")
 }
-
+alert("Simulador de inicio de sesion")
+alert("los usuarios son : luciano, contraseña: pepe. juan, contraseña: pepino. farid, contraseña: coco")
 
 while (validacion == false) {
     const nombre = prompt('Ingrese su nombre')
@@ -25,6 +26,7 @@ while (validacion == false) {
             pass = prompt("Ingrese contraseña")
             if (pass === usuario1.contrasena) {
                 alert("Contraseña correcta")
+                alert("Sesion iniciada")
                 datos(usuario1)
                 validacion = true
             } else {
@@ -36,6 +38,7 @@ while (validacion == false) {
             pass = prompt("Ingrese contraseña")
             if (pass === usuario2.contrasena) {
                 alert("Contraseña correcta")
+                alert("Sesion iniciada")
                 validacion = true
                 datos(usuario2)
             } else {
@@ -47,6 +50,7 @@ while (validacion == false) {
             pass = prompt("Ingrese contraseña")
             if (pass === usuario3.contrasena) {
                 alert("Contraseña correcta")
+                alert("Sesion iniciada")
                 datos (usuario3)
                 validacion = true
             } else {
