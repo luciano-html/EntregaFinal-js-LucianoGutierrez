@@ -1,121 +1,53 @@
-class Usuario {
-    constructor(nombre, contrasena, edad, dni) {
-        this.nombre = nombre,
-            this.contrasena = contrasena,
-            this.edad = edad,
-            this.dni = dni
+// Creamos un objeto constructor llamado "User" para guardar los imputs del usuario (nombre === name, contraseña === pass)
+class user {
+    constructor(name, pass) {
+        this.name = name;
+        this.pass = pass;
     }
 }
 
-const usuario1 = new Usuario("luciano", "pepe", "26", "39570189")
-const usuario2 = new Usuario("juan", "pepino", "28", "38814902")
-const usuario3 = new Usuario("farid", "coco", "30", "48094898")
-let validacion = false
+// Creamos un array donde se iran guardando los objetos
+const users = []
 
-function datos(Usuario) {
-    const usuario = Usuario
-    alert("Tu dni es " + usuario.dni+" y tu edad es "+usuario.edad +" años")
-}
-alert("Simulador de inicio de sesion")
-alert("los usuarios son : luciano, contraseña: pepe. juan, contraseña: pepino. farid, contraseña: coco")
+// Inicia el bucle
+const validacion = true
+while (validacion !== false) {
 
-while (validacion == false) {
-    const nombre = prompt('Ingrese su nombre')
-    switch (nombre) {
-        case "luciano":
-            pass = prompt("Ingrese contraseña")
-            if (pass === usuario1.contrasena) {
-                alert("Contraseña correcta")
-                alert("Sesion iniciada")
-                datos(usuario1)
-                validacion = true
+    console.log(users)
+    const elegir = +prompt("Pulse 1 para crear cuenta o pulse 2 para iniciar sesion")
+
+    if (elegir === 1) {
+
+        const name = prompt("Ingrese un nombre")
+        const pass = prompt("Ingrese una contraseña")
+        alert("Cuenta Creada")
+        users.push(new user(name, pass)); // Pusheamos el imput name y pass para guardarlos en el objeto constructor "User"
+
+
+    } else if (elegir === 2) {
+
+        const name = prompt('Ingrese su nombre');
+        let obj = users.find((e) => e.name === name) //Buscamos un objeto cuyo nombre se encuentre en el array "users"
+
+
+        if (obj !== undefined) {
+            const pass = prompt('Ingrese su contraseña')
+
+            if (obj.pass === pass) {
+                alert('Ingresaste!');
             } else {
-                alert("Contraseña incorrecta")
+                alert('Contraseña invalida');
             }
-            break;
-
-        case "juan":
-            pass = prompt("Ingrese contraseña")
-            if (pass === usuario2.contrasena) {
-                alert("Contraseña correcta")
-                alert("Sesion iniciada")
-                validacion = true
-                datos(usuario2)
-            } else {
-                alert("Contraseña incorrecta")
-            }
-            break;
-
-        case "farid":
-            pass = prompt("Ingrese contraseña")
-            if (pass === usuario3.contrasena) {
-                alert("Contraseña correcta")
-                alert("Sesion iniciada")
-                datos (usuario3)
-                validacion = true
-            } else {
-                alert("Contraseña incorrecta")
-            }
-            break;
 
 
-        default:
-            validacion = false
-            alert("Usuario incorrecto")
-            break;
+        } else {
+            alert('Usuario no encontrado')
+        }
+
+
+    } else {
+        alert("Opcion incorrecta")
+        break
     }
 }
 
-
-
-
-
-
-
-
-// class Usuario {
-//     constructor(nombre, contrasena, edad, dni) {
-//         this.nombre = nombre,
-//             this.contrasena = contrasena,
-//             this.edad = edad,
-//             this.dni = dni
-//     }
-// }
-
-// const Usuarios = [];
-
-// function nuevosUsuarios() {
-
-//     const nombre = prompt('Ingrese su nombre')
-//     const contrasena = prompt('Ingrese su contraseña')
-//     const edad = prompt('Ingrese su edad')
-//     const dni = prompt('Ingrese su dni')
-    
-//     return new Usuario(nombre, contrasena, edad, dni)
-// }
-
-// let validacion = true
-
-// function datos(Usuario) {
-//     const usuario = Usuario
-//     alert("Tu dni es " + usuario.dni + " y tu edad es " + usuario.edad + " años")
-// }
-
-// Usuarios.push (nuevosUsuarios())
-// while (validacion == false) {
-//     console.log(Usuarios.length)
-//     for (let count = 0; count < Usuarios.lenght; count++) {
-        
-//         const nombre = prompt('Ingrese su nombre')
-//         if (Usuarios[count].nombre == nombre) {
-//             const pass = prompt('Ingrese su nombre')
-//             if (Usuarios[count].contrasena == pass) {
-//                 alert("Contraseña correcta")
-//                 datos(Usuarios[count]);
-//                 validacion = true;
-//             }
-//         } else {
-//             alert("Datos incorrecta")
-//         }
-//     }
-// }
