@@ -1,53 +1,77 @@
-// Creamos un objeto constructor llamado "User" para guardar los imputs del usuario (nombre === name, contraseña === pass)
-class user {
-    constructor(name, pass) {
-        this.name = name;
-        this.pass = pass;
+class User {
+    constructor(name, lastName) {
+        this.name = name,
+            this.lastName = lastName
     }
 }
 
-// Creamos un array donde se iran guardando los objetos
 const users = []
+users.push(new User("luciano", "gutierrez"))
+const btnSwitch = document.getElementById("flexSwitch")
+const span = document.getElementById("span")
+let boolSwitch = false
 
-// Inicia el bucle
-const validacion = true
-while (validacion !== false) {
+if(localStorage.getItem("login")){
+    const datosUsuario = JSON.parse(localStorage.getItem("login"))
+    const spanHeader = document.getElementById("spanHeader")
+    spanHeader.innerText = `Sesion Iniciada de ${datosUsuario.name} ${datosUsuario.lastName}`
+}
 
-    console.log(users)
-    const elegir = +prompt("Pulse 1 para crear cuenta o pulse 2 para iniciar sesion")
-
-    if (elegir === 1) {
-
-        const name = prompt("Ingrese un nombre")
-        const pass = prompt("Ingrese una contraseña")
-        alert("Cuenta Creada")
-        users.push(new user(name, pass)); // Pusheamos el imput name y pass para guardarlos en el objeto constructor "User"
-
-
-    } else if (elegir === 2) {
-
-        const name = prompt('Ingrese su nombre');
-        let obj = users.find((e) => e.name === name) //Buscamos un objeto cuyo nombre se encuentre en el array "users"
-
-
-        if (obj !== undefined) {
-            const pass = prompt('Ingrese su contraseña')
-
-            if (obj.pass === pass) {
-                alert('Ingresaste!');
-            } else {
-                alert('Contraseña invalida');
-            }
-
-
-        } else {
-            alert('Usuario no encontrado')
+function login() {
+    const name = document.getElementById("nombre")
+    const lastName = document.getElementById("apellido")
+    const submit = document.getElementById("submit")
+    let obj = users.find((e) => e.name === name.value)
+    
+    if (obj) {
+        if (lastName.value === obj.lastName) {
+            span.innerText = `Bienvenido ${obj.name} ${obj.lastName} !`   
+            return obj
         }
-
-
     } else {
-        alert("Opcion incorrecta")
-        break
+        span.innerText = `Usuario u Contrasena incorrecta !`
+        return undefined
     }
 }
 
+function register(){
+    const name = document.getElementById("nombre")
+    const lastName = document.getElementById("apellido")
+    const submit = document.getElementById("submit")
+    let obj = users.find((e) => e.name === name.value)
+
+    if (obj) {
+        span.innerText = `El nombre de usuario ya existe`
+    } else {
+        users.push(new User(name.value, lastName.value))
+        span.innerText = `Usuario ${name.value} creado con exito !`
+    }
+}
+
+submit.onclick = (e) => {
+    e.preventDefault(e)
+    boolUserRegister = false
+    if(boolSwitch){
+        register()
+    }else{
+        obj = login()
+        if(obj){
+            localStorage.setItem("login",JSON.stringify(obj))
+        }
+    }
+}
+
+btnSwitch.onclick = () => {
+    let title = document.getElementById("tituloJS");
+    let sub = document.getElementById("submit")
+    span.innerText = ``
+    if (boolSwitch) {
+        boolSwitch = false
+        title.innerText = `Inicio de Sesion`;
+        sub.value = "Iniciar sesion"
+    } else {    
+        boolSwitch = true
+        title.innerText = `Registro`;
+        sub.value = "Registrar"
+    }
+}

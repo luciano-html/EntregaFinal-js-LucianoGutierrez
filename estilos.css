@@ -1,0 +1,758 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    background-image: url(../img/backgroundTextura.jpg);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.contPages1 {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    margin: 100px;
+    height: 80vh;
+}
+
+@media (max-width: 1300px) {
+    .contPages1 {
+        flex-direction: column-reverse;
+        margin: 20px;
+    }
+}
+
+@media (max-width: 748px) {
+    .contPages1 {
+        max-width: 690px;
+        margin: 0px;
+        margin-top: 50px;
+    }
+}
+
+@media (max-width: 404px) {
+    .contPages1 {
+        scale: 0.95;
+        margin-bottom: 0px;
+    }
+}
+
+.contPages1 .imagenPages1 {
+    display: flex;
+    width: 40%;
+    align-items: center;
+    justify-content: center;
+}
+
+.contPages1 .imagenPages1 img {
+    width: 400px;
+    box-shadow: 7px 13px 37px #000;
+    padding: 5px;
+    width: 300px;
+    margin-top: 50px;
+}
+
+@media (max-width: 425px) {
+    .contPages1 .imagenPages1 img {
+        width: 200px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 378px) {
+    .contPages1 .imagenPages1 img {
+        width: 180px;
+    }
+}
+
+@media (max-width: 1300px) {
+    .contPages1 .imagenPages1 {
+        margin: 0px;
+    }
+}
+
+.contPages1 .textoPages {
+    width: 60%;
+}
+
+@media (max-width: 1050px) {
+    .contPages1 .textoPages {
+        width: 100%;
+    }
+}
+
+.contPages1 .textoPages .tituloPages {
+    font-size: 36px;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.contPages1 .textoPages .introPages {
+    font-size: 22px;
+}
+
+@media (max-width: 960px) {
+    .contPages1 .textoPages .introPages {
+        width: 100%;
+    }
+}
+
+.botonIndice {
+    display: flex;
+    height: 100px;
+    width: 25%;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    width: 25%;
+    position: sticky;
+    top: 133.42px;
+    margin-bottom: 50px;
+    margin: 10px;
+}
+
+.botonIndice .botonPages {
+    text-decoration: none;
+    font-size: 18px;
+    margin-top: 25px;
+    transition-duration: 50ms;
+    padding: 10px;
+}
+
+.botonIndice .botonPages:hover {
+    transform: scale(1.05);
+}
+
+@media (max-width: 400px) {
+    .botonIndice .botonPages {
+        font-size: 18px;
+    }
+}
+
+.botonIndice .upper {
+    display: flex;
+    position: sticky;
+    top: 0;
+    margin-top: 50px;
+}
+
+.botonIndice .upper img {
+    background-color: black;
+    width: 75px;
+    margin: 20px;
+    border-radius: 100%;
+}
+
+.contenidoPages {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    margin: auto;
+}
+
+@media (max-width: 748px) {
+    .contenidoPages {
+        margin: 0px;
+        max-width: 748px;
+    }
+}
+
+.cuerpo {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 65%;
+}
+
+.topicos {
+    display: flex;
+    justify-content: center;
+    border-radius: 5px;
+    font-size: 30px;
+    margin: 20px;
+    padding: 25px;
+    width: 50%;
+    background-color: #003E58;
+    color: white;
+}
+
+@media (max-width: 420px) {
+    .topicos {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 385px) {
+    .topicos {
+        font-size: 22px;
+        margin-bottom: 0px;
+        margin: 20px;
+    }
+}
+
+.subtPages {
+    font-size: 18px;
+    text-decoration: none;
+    margin: 25px;
+    border-radius: 5px;
+    background-color: rgba(0, 62, 88, 0.9098039216);
+    margin: 25px;
+    padding: 25px;
+    color: white;
+}
+
+@media (max-width: 748px) {
+    .subtPages {
+        margin: auto;
+    }
+}
+
+@media (max-width: 420px) {
+    .subtPages {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 420px) {
+    .subtPages {
+        font-size: 16px;
+    }
+}
+
+.parrafosPages {
+    background-color: rgba(0, 0, 0, 0.196);
+    margin-top: 25px;
+    padding: 20px;
+    font-size: 18px;
+    line-height: 25px;
+}
+
+@media (max-width: 748px) {
+    .parrafosPages {
+        margin-bottom: 30px;
+    }
+}
+
+.imgPages {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 25px;
+    outline: 5px solid #003E58;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: rgba(0, 62, 88, 0.368627451);
+}
+
+.imgPages img {
+    max-width: 680px;
+    margin: 5px;
+}
+
+@media (max-width: 1000px) {
+    .imgPages img {
+        max-width: 600px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 800px) {
+    .imgPages img {
+        max-width: 400px;
+    }
+}
+
+@media (max-width: 410px) {
+    .imgPages img {
+        max-width: 200px;
+    }
+}
+
+header {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background: #003E58;
+    width: 100%;
+    color: white;
+}
+
+header .contenedorLogin .volver {
+    color: white;
+    text-decoration: underline solid 1px rgba(255, 255, 255, 0);
+    outline: 1px solid white;
+    padding: 12px;
+    margin: 20px;
+}
+
+header .imagenInicio {
+    width: 200px;
+    margin: 20px;
+    padding: 2px;
+    outline: solid 1px rgba(255, 255, 255, 0);
+}
+
+header .imagenInicio:hover {
+    outline: solid 1px rgb(255, 255, 255);
+    transition-duration: 200ms;
+}
+
+@media (max-width: 748px) {
+    header .imagenInicio {
+        width: 150px;
+    }
+}
+
+@media (max-width: 629px) {
+    header .imagenInicio {
+        margin: 5px;
+        width: 100px;
+    }
+}
+
+@media (max-width: 583px) {
+    header .imagenInicio {
+        margin: 5px;
+        width: 100px;
+    }
+}
+
+@media (max-width: 405px) {
+    header .imagenInicio {
+        width: 70px;
+    }
+}
+
+@media (max-width: 375px) {
+    header .imagenInicio {
+        width: 50px;
+    }
+}
+
+header .botoneraHeader {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    font-size: 25px;
+    margin: 25px;
+}
+
+@media (max-width: 960px) {
+    header .botoneraHeader {
+        gap: 20px;
+    }
+}
+
+@media (max-width: 459px) {
+    header .botoneraHeader {
+        font-size: 8px;
+    }
+}
+
+header .botoneraHeader .botonHeader,
+header .botoneraHeader .login .botonLogin,
+header .login .botoneraHeader .botonLogin {
+    color: white;
+    text-decoration: underline solid 1px rgba(255, 255, 255, 0);
+    outline: 1px solid white;
+    padding: 12px;
+}
+
+header .botoneraHeader .botonHeader:hover,
+header .botoneraHeader .login .botonLogin:hover,
+header .login .botoneraHeader .botonLogin:hover {
+    text-decoration: underline solid 1px rgb(255, 255, 255);
+    transition-duration: 200ms;
+}
+
+@media (max-width: 461px) {
+
+    header .botoneraHeader .botonHeader,
+    header .botoneraHeader .login .botonLogin,
+    header .login .botoneraHeader .botonLogin {
+        padding: 5px;
+    }
+}
+
+@media (max-width: 1300px) {
+    header .botoneraHeader {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 748px) {
+    header .botoneraHeader {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 556px) {
+    header .botoneraHeader {
+        font-size: 8px;
+    }
+}
+
+header .login .botonLogin {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 200px;
+    margin-right: 30px;
+}
+
+@media (max-width: 985px) {
+    header .login .botonLogin {
+        margin-left: 5px;
+    }
+}
+
+footer .contenedorFooter {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #003E58;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+footer .contenedorFooter .ig img {
+    width: 20%;
+    margin: 20px;
+    margin-left: 30px;
+}
+
+@media (max-width: 748px) {
+    footer .contenedorFooter .ig img {
+        margin-left: 10px;
+    }
+}
+
+footer .contenedorFooter .correo {
+    color: white;
+}
+
+@media (max-width: 500px) {
+    footer .contenedorFooter .correo {
+        display: none;
+    }
+}
+
+footer .contenedorFooter .botonHeader,
+footer .contenedorFooter header .login .botonLogin,
+header .login footer .contenedorFooter .botonLogin {
+    color: white;
+    padding: 15px;
+    outline: 1px solid white;
+    text-decoration: underline solid 1px rgba(255, 255, 255, 0);
+}
+
+footer .contenedorFooter .botonHeader:hover,
+footer .contenedorFooter header .login .botonLogin:hover,
+header .login footer .contenedorFooter .botonLogin:hover {
+    text-decoration: underline solid 1px rgb(255, 255, 255);
+    transition-duration: 200ms;
+}
+
+@media (max-width: 748px) {
+
+    footer .contenedorFooter .botonHeader,
+    footer .contenedorFooter header .login .botonLogin,
+    header .login footer .contenedorFooter .botonLogin {
+        display: none;
+    }
+}
+
+main .tarjeta1 {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 50px;
+    width: 90%;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+@media (max-width: 900px) {
+    main .tarjeta1 {
+        flex-direction: column;
+        gap: 50px;
+    }
+}
+
+@media (max-width: 583px) {
+    main .tarjeta1 {
+        margin: 20px;
+    }
+}
+
+main .tarjeta1 .texto {
+    width: 60%;
+    font-size: 18px;
+}
+
+@media (max-width: 583px) {
+    main .tarjeta1 .texto {
+        font-size: 16px;
+    }
+}
+
+main .tarjeta1 .imgTarjeta1 img {
+    width: 400px;
+    box-shadow: 7px 13px 37px #000;
+    padding: 5px;
+}
+
+@media (max-width: 1300px) {
+    main .tarjeta1 .imgTarjeta1 img {
+        width: 300px;
+    }
+}
+
+@media (max-width: 583px) {
+    main .tarjeta1 .imgTarjeta1 img {
+        width: 200px;
+    }
+}
+
+main .tarjeta2 {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 50px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@media (max-width: 900px) {
+    main .tarjeta2 {
+        flex-direction: column-reverse;
+        gap: 50px;
+    }
+}
+
+main .tarjeta2 .imgTarjeta2 {
+    width: 40%;
+}
+
+main .tarjeta2 .imgTarjeta2 img {
+    width: 400px;
+    box-shadow: 7px 13px 37px #000;
+    padding: 5px;
+}
+
+@media (max-width: 1140px) {
+    main .tarjeta2 .imgTarjeta2 img {
+        width: 300px;
+    }
+}
+
+@media (max-width: 583px) {
+    main .tarjeta2 .imgTarjeta2 img {
+        width: 200px;
+    }
+}
+
+main .tarjeta2 .texto2 {
+    width: 60%;
+}
+
+main .prefooter {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    margin: 100px;
+    gap: 100px;
+}
+
+main .prefooter .botoneraPrefooter {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 70px;
+}
+
+@media (max-width: 583px) {
+    main .prefooter .botoneraPrefooter .comencemos {
+        font-size: 8px;
+    }
+}
+
+@media (max-width: 375px) {
+    main .prefooter .botoneraPrefooter .comencemos {
+        font-size: 5px;
+    }
+}
+
+@media (max-width: 960px) {
+    main .prefooter .botoneraPrefooter {
+        gap: 20px;
+    }
+}
+
+@media (max-width: 583px) {
+    main .prefooter .botoneraPrefooter {
+        gap: 7px;
+        margin: 5px;
+    }
+}
+
+main .prefooter .botoneraPrefooter .boton {
+    text-decoration: underline solid 1px rgba(255, 255, 255, 0);
+    font-size: 30px;
+    background-color: #003E58;
+    color: white;
+    padding: 20px;
+}
+
+main .prefooter .botoneraPrefooter .boton:hover {
+    text-decoration: underline solid 1px rgb(255, 255, 255);
+    transition-duration: 200ms;
+}
+
+@media (max-width: 690px) {
+    main .prefooter .botoneraPrefooter .boton {
+        font-size: 25px;
+    }
+}
+
+@media (max-width: 650px) {
+    main .prefooter .botoneraPrefooter .boton {
+        font-size: 10px;
+        padding: 5px;
+    }
+}
+
+.tituloAltura {
+    background-color: rgb(157, 95, 214);
+}
+
+.botonAltura {
+    background-color: rgb(157, 95, 214);
+    color: black;
+}
+
+.tituloArmonia {
+    background-color: rgb(177, 177, 177);
+}
+
+.botonArmonia {
+    background-color: rgb(177, 177, 177);
+    color: black;
+}
+
+.tituloRitmo {
+    background-color: #00ffff;
+}
+
+.botonRitmo {
+    color: black;
+    background: #00ffff;
+}
+
+.main {
+    height: 100vh;
+}
+
+.flexSwitch {
+    width: auto;
+}
+
+.tituloJS {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    margin: 20px;
+}
+
+.form-register {
+    width: 400px;
+    background: #003E58;
+    padding: 55px;
+    margin: 20px;
+    border-radius: 4px;
+    font-family: "calibri";
+    color: white;
+    box-shadow: 7px 13px 37px #000;
+}
+
+.form-register h4 {
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.form-register .controls {
+    width: 100%;
+    background: #24303c;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    border: 1px solid #1f53c5;
+    font-family: "calibri";
+    font-size: 18px;
+    color: white;
+}
+
+.form-register p {
+    height: 40px;
+    text-align: center;
+    font-size: 18px;
+    line-height: 40px;
+}
+
+@media (max-width: 442px) {
+    .form-register p {
+        margin: 20px;
+    }
+}
+
+.form-register a {
+    color: white;
+    text-decoration: none;
+}
+
+.form-register a:hover {
+    text-decoration: underline;
+}
+
+.form-register .botons {
+    width: 100%;
+    background: #1f53c5;
+    border: none;
+    padding: 12px;
+    color: white;
+    margin: 16px 0;
+    font-size: 16px;
+}
+
+/*# sourceMappingURL=estilos.css.map */
